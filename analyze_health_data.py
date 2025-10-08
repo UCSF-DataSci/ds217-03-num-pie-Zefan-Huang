@@ -107,16 +107,14 @@ def save_report(report, filename):
 
 def main():
 
-    data = load_data("/Users/stefan/Desktop/Data Sci 217/ds217-03-num-pie-Zefan-Huang/health_data.csv")
+    data = load_data("health_data.csv")
     stats = calculate_statistics(data)
     abnormal = find_abnormal_readings(data)
     total_readings = len(data)
     report = generate_report(stats, abnormal, total_readings)
-    save_report(report, "/Users/stefan/Desktop/Data Sci 217/ds217-03-num-pie-Zefan-Huang/output/analysis_report.txt")
+    save_report(report, "output/analysis_report.txt")
     print("Analysis report saved to 'output/analysis_report.txt'")
 
 
 if __name__ == "__main__":
     main()
-
-hi
